@@ -18,4 +18,10 @@ BONUS: Also add the class 'open' to the overlay
 //Bonus
 openModalButton.addEventListener('click', () => {
   modal.classList.add('open')
+  overlay.classList.add('open')
+})
+
+closeModalButton.addEventListener('click', () => {
+  modal.classList.remove('open')
+  overlay.classList.remove('open')
 })
