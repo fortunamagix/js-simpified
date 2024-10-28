@@ -13,7 +13,7 @@ let myArray = [1, 2, 3, 4, 5, 6]
 
 //using an if statement with else if I want you to check the length of the array
 //If it is empty print out 'empty'
-if (myArray === 0) {
+if (myArray.length === 0) {
   console.log('empty')
 } else if (myArray.length < 5) { //If it has less than 5 elements print out 'small'
   console.log('small')
