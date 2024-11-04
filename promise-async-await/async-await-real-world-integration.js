@@ -24,11 +24,31 @@ Here’s a more comprehensive example that combines everything:
 
 async function fetchAndProcessData(url) {
   try {
+    const response = await fetch(url)
+    const data = await response.json()
+    // Process data here
+    console.log(data)
+
+    // Example of parallel execution with other tasks
+    const task1 = task1 => {
+      console.log(task1)
+    }
+    const task2 = (task2) => {
+      console.log(task2)
+    }
+
+    const otherResult = await Promise.all([task1, task2])
+    console.log('Other results:', otherResult)
 
   } catch (error) {
+    console.error('Error', error)
 
   }
 }
+
+// Usage
+const url = 'https://www.freepublicapis.com/api/random'
+fetchAndProcessData(url)
 
 /*
 * Best Practices
